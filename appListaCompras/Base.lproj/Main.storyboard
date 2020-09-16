@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="appListaCompras" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="digite o nome do produto aqui..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i65-AK-xkg">
+                                <rect key="frame" x="46" y="174" width="322" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="322" id="Bg4-6x-PTT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="digite a quantidade aqui..." textAlignment="justified" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g51-it-thG">
+                                <rect key="frame" x="46" y="216" width="322" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="322" id="Y5Y-b8-LGV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="cS3-em-7Ud">
+                                <rect key="frame" x="46" y="264" width="322" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Csp-qh-cgR">
+                                        <rect key="frame" x="0.0" y="0.0" width="43" height="30"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Salvar">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tapAddProducts:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eho-3L-mxI"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h3i-ri-57R">
+                                        <rect key="frame" x="137" y="0.0" width="47" height="30"/>
+                                        <state key="normal" title="Limpar">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e0y-vM-iot">
+                                        <rect key="frame" x="276" y="0.0" width="46" height="30"/>
+                                        <state key="normal" title="Excluir">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnRemove:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OaI-59-Uou"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nct-Qr-vkC">
+                                <rect key="frame" x="46" y="319" width="322" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="eVm-Lv-rIE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="i65-AK-xkg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="130" id="CVk-Vd-oP2"/>
+                            <constraint firstItem="cS3-em-7Ud" firstAttribute="leading" secondItem="g51-it-thG" secondAttribute="leading" id="DWe-Ha-3FU"/>
+                            <constraint firstItem="cS3-em-7Ud" firstAttribute="trailing" secondItem="i65-AK-xkg" secondAttribute="trailing" id="JFb-HV-jin"/>
+                            <constraint firstItem="g51-it-thG" firstAttribute="top" secondItem="i65-AK-xkg" secondAttribute="bottom" constant="8" id="YpO-Eh-VPp"/>
+                            <constraint firstItem="cS3-em-7Ud" firstAttribute="top" secondItem="g51-it-thG" secondAttribute="bottom" constant="14" id="Zpe-DL-bJo"/>
+                            <constraint firstItem="Nct-Qr-vkC" firstAttribute="trailing" secondItem="cS3-em-7Ud" secondAttribute="trailing" id="iDj-gE-Giz"/>
+                            <constraint firstItem="Nct-Qr-vkC" firstAttribute="top" secondItem="cS3-em-7Ud" secondAttribute="bottom" constant="25" id="npQ-PU-vID"/>
+                            <constraint firstItem="g51-it-thG" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="qhw-49-fgb"/>
+                            <constraint firstItem="i65-AK-xkg" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="v7f-Mx-VZ8"/>
+                            <constraint firstItem="Nct-Qr-vkC" firstAttribute="leading" secondItem="cS3-em-7Ud" secondAttribute="leading" id="v8v-ve-tvB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnClear" destination="h3i-ri-57R" id="hBN-lI-ArK"/>
+                        <outlet property="btnRemove" destination="e0y-vM-iot" id="CBh-4d-IHs"/>
+                        <outlet property="btnSave" destination="Csp-qh-cgR" id="dWW-bF-vVy"/>
+                        <outlet property="lblProducts" destination="Nct-Qr-vkC" id="M2v-YH-ysk"/>
+                        <outlet property="textFieldName" destination="i65-AK-xkg" id="shn-5G-Hul"/>
+                        <outlet property="textFieldQuantity" destination="g51-it-thG" id="lZ6-XZ-ncP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140.57971014492756" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+</document>
